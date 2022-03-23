@@ -1,0 +1,1 @@
+create table trains(id bigint auto_increment, destination varchar(255), departure timestamp NOT NULL, max_capacity bigint, number_of_passengers bigint default 0, constraint pk_trains primary key(id));
