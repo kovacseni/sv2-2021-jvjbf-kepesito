@@ -21,7 +21,7 @@ class TrainRepositoryTest {
         try {
             dataSource.setUrl("jdbc:mariadb://localhost:3306/examtest?useUnicode=true");
             dataSource.setUser("root");
-            dataSource.setPassword("MateAnna_9399");
+            dataSource.setPassword("***");
         } catch (SQLException sqle) {
             throw new IllegalStateException("Cannot reach DataBase!", sqle);
         }

@@ -12,6 +12,8 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import static java.lang.Long.getLong;
+
 public class TrainRepository {
     private DataSource dataSource;
     private JdbcTemplate jdbcTemplate;
@@ -50,11 +52,8 @@ public class TrainRepository {
     }
 
     public void updateNumberOfPassengersById(long id, int amount) {
+        //int numberOfActualPassengers = jdbcTemplate.queryForObject("select * from trains where id = ?;", ((rs, rowNum) -> rs.getLong("number_of_passengers")) ,  id);
 
         jdbcTemplate.update("update trains set number_of_passengers = ? where id = ?;", amount, id);
     }
-
-
-
-
 }
